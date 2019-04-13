@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\tomas\\RiderProjects\\RentApp\\RentApp.Infrastructure\\RentApp.Infrastructure.csproj": {
+            "projectPath": "C:\\Users\\tomas\\RiderProjects\\RentApp\\RentApp.Infrastructure\\RentApp.Infrastructure.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -45,7 +49,7 @@
           "target": "Package",
           "version": "[2.2.0, )"
         },
-        "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+        "Microsoft.EntityFrameworkCore.Sqlite": {
           "target": "Package",
           "version": "[2.2.0, )"
         },
