@@ -19,7 +19,9 @@ namespace RentApp.Infrastructure.RentContext
         public RentContext(DbContextOptions options) : base(options)
         {
         }
-        
+
+           
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(connectionString: "DataSource=dbo.RentFlatApi.db");
@@ -35,7 +37,7 @@ namespace RentApp.Infrastructure.RentContext
             
             modelBuilder.Entity<Flat>()
                 .HasOne(navigationExpression: x => x.Owner)
-                .WithOne(navigationExpression: y => y.Flats)
+                .WithMany(navigationExpression: y => y.Flats)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Flat>()
