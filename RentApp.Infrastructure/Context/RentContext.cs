@@ -35,7 +35,7 @@ namespace RentApp.Infrastructure.RentContext
             
             modelBuilder.Entity<Flat>()
                 .HasOne(navigationExpression: x => x.Owner)
-                .WithMany(navigationExpression: y => y.Flats)
+                .WithOne(navigationExpression: y => y.Flats)
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Flat>()
